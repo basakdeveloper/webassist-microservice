@@ -24,7 +24,9 @@ public class ProductController {
 	
 	@GetMapping("")
     public List<Product> allProducts() {
-        return productService.findAllProducts();
+		List<Product> products = productService.findAllProducts();
+		
+        return products;
     }
 	
     @GetMapping("/{code}")
